@@ -11,4 +11,4 @@ public function down()
     Schema::table('users', function (Blueprint $table) {
         $table->dropColumn(['username', 'role']);
     });
-}php artisan migrate
+}
