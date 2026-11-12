@@ -8,18 +8,13 @@ Dynamic Middleware Approach: Utilized a parameterized custom middleware (CheckRo
 
 Role-and-Permission Matrix
 
-Feature/ Route / Action                 Admin            Regular User            Guest (Logged Out)
-View Public Portal / Home (/)         Allowed              Allowed                    Allowed
-
-View User Dashboard (/dashboard)      Allowed              Allowed           Blocked (Redirect to Login)
-
-Report Lost / Found Items             Allowed              Allowed           Blocked (Redirect to Login)
-
-Access Admin Dashboard                Allowed            Denied (403)        Blocked (Redirect to Login)
-(/admin/dashboard)
-
-Manage / Delete Records               Allowed            Denied (403)        Blocked (Redirect to Login)
-(/admin/items/{id})
+| Feature / Route / Action | Admin | Regular User | Guest (Logged Out) |
+| :--- | :---: | :---: | :---: |
+| **View Public Portal / Home** (`/`) | Allowed | Allowed | Allowed |
+| **View User Dashboard** (`/dashboard`) | Allowed | Allowed | Blocked (Redirect to Login) |
+| **Report Lost / Found Items** | Allowed | Allowed | Blocked (Redirect to Login) |
+| **Access Admin Dashboard** (`/admin/dashboard`) | Allowed | Denied (403) | Blocked (Redirect to Login) |
+| **Manage / Delete Records** (`/admin/items/{id}`) | Allowed | Denied (403) | Blocked (Redirect to Login) |
 
 
 
